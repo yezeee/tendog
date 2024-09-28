@@ -56,7 +56,7 @@ String cp = request.getContextPath();
 				시험 응시 결과<br> 
 				점수 : ${score }점<br>
 				<span id="pass" style="display: none;">축하합니다. 합격하셨습니다.</span>
-				<span id="nonpass" style="display: none;" >너 불합격</span>
+				<span id="nonpass" style="display: none;" >아쉽게도 불합격하셨습니다.<br> 재응시 가능 횟수는 2회 입니다.</span>
 				<br><br>
 				<button type="button" id="pageMoveBtn">홈으로 돌아가기</button>
 			</div>

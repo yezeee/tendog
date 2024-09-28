@@ -29,6 +29,14 @@ $().ready(function() {
 		$(location).attr("href", "myperformlist.action");
 	});
 	
+	$('.deleteBtn').click(function()
+	{
+		if (confirm("정말 삭제하시겠습니까?"))
+		{
+			$(location).attr("href", "performedpicdelete.action?performCd=<%=performCd%>&performedPicCd=" + $(this).val());	
+		}
+	});
+	
 	$('#uploadButton').on('click', function () {
 	    $('#fileInput').click();
 	});
@@ -78,7 +86,7 @@ $().ready(function() {
 
 <c:import url="Menu.jsp"></c:import>
 
- <div class="main" style="background-color: white; display: flex; justify-content: space-between;">
+ <div class="main" style="background-color: white; display: flex; justify-content: space-between; padding-bottom: 50px;">
 	<br><br>
 	<div class="left" style="font-family: Pretendard; font-size: 14pt; width: 20%; text-align: right;">
 		<br><br>
@@ -104,7 +112,9 @@ $().ready(function() {
     			</div>
     			<div style="width: 75%; text-align: center; margin-top: 15px;">
         			${pic.pic_memo}
-        			<br><br><br><br>
+        			<br><br><br>
+        			<button type="button" class="deleteBtn" value="${pic.performed_pic_cd}" style="border: none; background-color: #F2F2F2; border-radius: 15px; width: 80px; font-weight: 600;"><br>삭제하기<br><br></button>
+        			<br>
     			</div>			
 			</div>
 
@@ -146,40 +156,39 @@ $().ready(function() {
 			</c:if>
 			</c:forEach>
 			
-			<c:if test="${picList.isEmpty() }">
-			<div style="width: 90%; display: flex; justify-content: flex-start;">
-				<div style="width: 30%; display: flex; justify-content: center; flex-direction: column; align-items: center; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); margin-top: 25px; margin-bottom: 25px; margin-right: 25px; text-align: center;">
-					<div style="width: 75%; border: 2px solid #F2F2F2; margin-top: 25px; margin-bottom: 25px; overflow: hidden;">
-						<br><br>
-							<img style="border: solid white 1px; width: 60%; height: 60%; object-fit: cover;" id="dogImage" src="images/시바.jpg" alt="Dog Photo">				
-							<!-- 파일 업로드 폼과 버튼 -->
-	
-							<!-- 숨겨진 파일 입력 -->
-							<input hidden="hidden" type="file" id="fileInput" name="fileImage">
-							<input type="hidden" id="filePathInput" name="filePath">		
-						<br><br>				
-	  						<a id="uploadButton" style="color:gray; font-family: Pretendard; font-weight: 600; font-size: 14pt; vertical-align: top; cursor: pointer;">사진 첨부하기</a>				
-						<input type="file" id="performPic" style="display: none;"/> 
-						<br><br><br>
-					</div>
-					<div>
-					<textarea name="applytext" rows="5" cols="33" style="border: none; background-color: #F2F2F2;"></textarea>
+		<c:if test="${picList.isEmpty() }">
+		<div style="width: 90%; display: flex; justify-content: flex-start;">
+			<div style="width: 30%; display: flex; justify-content: center; flex-direction: column; align-items: center; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); margin-top: 25px; margin-bottom: 25px; margin-right: 25px; text-align: center;">
+				<div style="width: 75%; border: 2px solid #F2F2F2; margin-top: 25px; margin-bottom: 25px; overflow: hidden;">
 					<br><br>
-					<button id="formsubmit" type="submit" style="border: none; background-color: #F2F2F2; border-radius: 15px; width: 80px; font-weight: 600;"><br>등록하기<br><br></button>	
-					<br><br>
-					</div>			
+						<img style="border: solid white 1px; width: 60%; height: 60%; object-fit: cover;" id="dogImage" src="images/시바.jpg" alt="Dog Photo">				
+						<!-- 파일 업로드 폼과 버튼 -->
+
+						<!-- 숨겨진 파일 입력 -->
+						<input hidden="hidden" type="file" id="fileInput" name="fileImage">
+						<input type="hidden" id="filePathInput" name="filePath">		
+					<br><br>				
+  						<a id="uploadButton" style="color:gray; font-family: Pretendard; font-weight: 600; font-size: 14pt; vertical-align: top; cursor: pointer;">사진 첨부하기</a>				
+					<input type="file" id="performPic" style="display: none;"/> 
+					<br><br><br>
 				</div>
-				<div style="width: 10%;">
-					<br><br>
-					<button type="button" style="border: none; background-color: #F2F2F2; border-radius: 8px; width: 100px; font-weight: 600; margin-bottom: 5px;"><br>일지보기<br><br></button> 
-					<button type="button" style="border: none; background-color: #F2F2F2; border-radius: 8px; width: 100px; font-weight: 600; margin-bottom: 5px;"><br>건강수첩보기<br><br></button>
-					<button type="button" style="border: none; background-color: #F2F2F2; border-radius: 8px; width: 100px; font-weight: 600; margin-bottom: 5px;"><br>의뢰서보기<br><br></button>
-					<button type="button" class="pageBack" style="border: none; background-color: #F2F2F2; border-radius: 8px; width: 100px; font-weight: 600; margin-bottom: 5px;"><br>돌아가기<br><br></button>  
-				</div>
+				<div>
+				<textarea name="applytext" rows="5" cols="33" style="border: none; background-color: #F2F2F2;"></textarea>
+				<br><br>
+				<button id="formsubmit" type="submit" style="border: none; background-color: #F2F2F2; border-radius: 15px; width: 80px; font-weight: 600;"><br>등록하기<br><br></button>	
+				<br><br>
+				</div>			
 			</div>
-			</c:if>
-			
-		<!-- </div> -->
+			<div style="width: 10%;">
+				<br><br>
+				<button type="button" style="border: none; background-color: #F2F2F2; border-radius: 8px; width: 100px; font-weight: 600; margin-bottom: 5px;"><br>일지보기<br><br></button> 
+				<button type="button" style="border: none; background-color: #F2F2F2; border-radius: 8px; width: 100px; font-weight: 600; margin-bottom: 5px;"><br>건강수첩보기<br><br></button>
+				<button type="button" style="border: none; background-color: #F2F2F2; border-radius: 8px; width: 100px; font-weight: 600; margin-bottom: 5px;"><br>의뢰서보기<br><br></button>
+				<button type="button" class="pageBack" style="border: none; background-color: #F2F2F2; border-radius: 8px; width: 100px; font-weight: 600; margin-bottom: 5px;"><br>돌아가기<br><br></button>  
+			</div>
+		</div>
+		</div>
+		</c:if>
 		</form>
 	</div>
 	<div style="width: 10%;"></div>

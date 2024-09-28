@@ -17,31 +17,39 @@ String cp = request.getContextPath();
 <c:import url="Menu.jsp"></c:import>
 	
 	<div class="main" style="background-color: white; display: flex; justify-content: space-between;">
-		<div class="left" style="font-family: Pretendard; font-size: 14pt; width: 20%; text-align: right;">
+		<div class="left" style="font-family: Pretendard; font-size: 14pt; width: 10%; text-align: right;">
 		</div>
-		<div class="content" style="width: 60%; text-align: center; font-size: 12pt; font-weight: 400;">
-			<br><br><br>
-			<span style="font-family: 'Cafe24Ssurround'; font-size: 20pt;">${sInfo.name } 펫시터님,<br> 앞으로 6회 더 활동하시면 B등급으로 올라가요!</span>
-			<br><br>
-			<!-- <span style="font-size: 12pt; color: gray;">▶ 통계 보기</span> -->
+		<div class="content" style="width: 80%; text-align: center; font-size: 12pt; font-weight: 400;">
+			<div style="display: flex; justify-content: space-between; align-items: center; padding-top: 10px; padding-bottom: 10px; margin-top: 50px;">
+				<div style="width: 50%; text-align: right;">
+					보리, 마루에 대한 펫시팅이 시작됐어요!<br>
+					수행 기록을 남기러 가볼까요?<br>
+					돌봄시간 : 18:00 ~ 20: 00
+				</div>
+				<div style="width: 5%;"></div>
+				<div style="width: 45%; text-align: left;">
+				<button type="button" class="performBtn" value="${perform_cd}" style="border: none; background-color: #F2F2F2; border-radius: 30px; width: 150px; font-weight: 600;"><br>▶ 수행하러 가기<br><br></button>
+				</div>
+			</div>
 			<hr style="border: 2px solid #F2F2F2;">
-			<div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
-				<div style="width: 20%; text-align: right;">
-					<br>
+			<div style="display: flex; justify-content: space-between; padding-top: 20px; padding-bottom: 20px;">
+				<div style="width: 15%; text-align: right;">
 					<c:if test="${sInfo.gender=='남' }">
-					<img src="images/user_m.png" style="width: 50%;">
+					<img src="images/user_m.png" style="width: 80%;">
 					</c:if>
 					<c:if test="${sInfo.gender=='여' }">
-					<img src="images/user_w.png" style="width: 50%;">
+					<img src="images/user_w.png" style="width: 80%;">
 					</c:if>
 				</div>
-				<div style="width: 15%; text-align: left;">
-					<br><br><br>
+				<div style="width: 1%;"></div>
+				<div style="width: 10%; text-align: left;">
+					<br><br>
 					<span style="font-size: 16pt; font-weight: 600;">${sInfo.name } <span style="font-size: 12pt; font-weight: 500;">펫시터</span></span>
 					<br><span style="color: gray;">${sInfo.reg_date.substring(0,2) }.${sInfo.reg_date.substring(3,5) }.${sInfo.reg_date.substring(6,8) } 승인</span>
 					<br><span style="color: gray;">${sInfo.gr }등급</span>
 				</div>
-				<div style="width: 15%; text-align: left; font-size: 14pt;">
+				<hr style="border: 1px solid #F2F2F2;">
+				<div style="width: 20%; text-align: left; font-size: 14pt;">
 					<br>
 					<span style="font-weight: 700;">수행건수</span><br>
 					${sInfo.perform_count }건
@@ -52,7 +60,7 @@ String cp = request.getContextPath();
 					</c:forEach>
 					<br>
 				</div>
-				<div style="width: 15%; text-align: left; font-size: 14pt;">
+				<div style="width: 20%; text-align: left; font-size: 14pt;">
 					<br>
 					<span style="font-weight: 700;">평균평점</span><br>
 					${sInfo.rating_avg }/10
@@ -93,7 +101,8 @@ String cp = request.getContextPath();
 						<div style="width: 60%; font-weight: 600; font-size: 14pt; text-align: left;">
 							<br>
 							지원내역<br><br>
-							현재 지원 건수&nbsp;&nbsp;&nbsp;<span style="font-weight: 400;">${sInfo.apply_count }건</span>
+							지원 중&nbsp;&nbsp;&nbsp;<span style="font-weight: 400;">${sInfo.apply_count }건</span><br>
+							매칭 완료&nbsp;&nbsp;&nbsp;<span style="font-weight: 400;">${sInfo.matching_count }건</span>
 							<br><br>							
 						</div>
 						<div style="width: 5%;">
@@ -145,7 +154,7 @@ String cp = request.getContextPath();
 			<hr style="border: 2px solid #F2F2F2;">
 			<br><br>
 		</div>
-		<div style="width: 20%;"></div>
+		<div style="width: 10%;"></div>
 	</div>
 
 	<br><br><br>

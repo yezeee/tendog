@@ -20,5 +20,7 @@ public interface IPerformDAO
 	
 	// 해당 수행건에 대한 수행사진 list
 	public ArrayList<PerformedPicDTO> performedPicList(@Param("memCd") String memCd, @Param("performCd") String performCd);	
-	
+
+	// 펫시터 수행사진 delete
+	public int performedPicDelete(String performedPicCd);
 }

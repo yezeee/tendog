@@ -53,6 +53,23 @@ String cp = request.getContextPath();
 				</c:forEach>
 			</table>
 			<br><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;수행완료
+			<hr style="border: 1px solid #F2F2F2;">
+			<table style="font-size: 12pt; width: 100%; text-align: center;">
+				<tr style="background-color: #F2F2F2; font-weight: 600;">
+					<th>예약일시</th>
+					<th style="width: 20%;"></th>
+				</tr>
+				<c:forEach var="perform" items="${PerformList }">
+					<tr style="font-weight: 400; border-bottom: 1px solid #F2F2F2;">
+						<td>${perform.work_date }</td>
+						<td>
+							<button type="button" class="pageMoveBtn" value="${perform.perform_cd }">평가보기</button>
+						</td>
+					</tr>
+				</c:forEach>
+			</table>
+			<br><br>
 		</div>
 		<div style="width: 20%;"></div>
 	</div>

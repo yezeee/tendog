@@ -46,6 +46,12 @@
         AND PP.PERFORM_CD = #{performCd}
 		ORDER BY PP.PERFORMED_PIC_DATE
 	</select>
+	
+	<delete id="performedPicDelete">
+		DELETE
+		FROM PERFORMED_PIC
+		WHERE PERFORMED_PIC_CD=#{performedPicCd}
+	</delete>
 
 </mapper>
 

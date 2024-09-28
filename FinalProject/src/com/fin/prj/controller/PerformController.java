@@ -69,4 +69,14 @@ public class PerformController
 		return "redirect:petsittingperformform.action?performCd=" + map.get("performCd");		
 	}
 	
+	@RequestMapping(value = "performedpicdelete.action")
+	public String performedPicDelete(String performCd, String performedPicCd)
+	{
+		IPerformDAO dao = sqlSession.getMapper(IPerformDAO.class);
+		
+		dao.performedPicDelete(performedPicCd);
+		
+		return "redirect:petsittingperformform.action?performCd=" + performCd;
+	}
+	
 }
