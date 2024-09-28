@@ -10,7 +10,7 @@ import com.fin.prj.dto.PerformedPicDTO;
 public interface IPerformDAO
 {
 	
-	// pic높은거
+	// 가장 최신에 등록된 PIC
 	public String searchPic(String mem_cd);
 
 	// PIC 등록

@@ -16,12 +16,22 @@
 		VALUES('PIC'||PIC_SEQ.NEXTVAL, #{mem_cd}, #{map.filePath}, SYSDATE)
 	</insert>
 
+	<!-- 
 	<select id="searchPic" resultType="java.lang.String">
 		SELECT
 		'PIC'||MAX(TO_NUMBER(SUBSTR(PIC_CD, 4)))PIC_CD
 		FROM PIC
 		WHERE MEM_CD =
 		#{mem_cd}
+	</select>
+	 -->
+	 
+	 <select id="searchPic" resultType="java.lang.String">
+		SELECT PIC_CD
+		FROM PIC
+		WHERE PIC_DATE = (SELECT MAX(PIC_DATE)
+                    		FROM PIC
+                   		   WHERE MEM_CD = #{mem_cd})
 	</select>
 	
 	<insert id="performedPicInsert">

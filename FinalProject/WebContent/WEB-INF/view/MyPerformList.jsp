@@ -15,9 +15,9 @@ String cp = request.getContextPath();
 
 	$().ready(function()
 	{
-		$("#pageMoveBtn").click(function()
+		$(".pageMoveBtn").click(function()
 		{
-			$(location).attr("href", "petsittingperformform.action?performCd=" + $("button[name='pageMoveBtn']").val())
+			$(location).attr("href", "petsittingperformform.action?performCd=" + $(this).val())
 		});
 	});
 
@@ -47,7 +47,7 @@ String cp = request.getContextPath();
 					<tr style="font-weight: 400; border-bottom: 1px solid #F2F2F2;">
 						<td>${perform.work_date }</td>
 						<td>
-							<button type="button" id="pageMoveBtn" name="pageMoveBtn" value="${perform.perform_cd }">수행하기</button>
+							<button type="button" class="pageMoveBtn" value="${perform.perform_cd }">수행하기</button>
 						</td>
 					</tr>
 				</c:forEach>
