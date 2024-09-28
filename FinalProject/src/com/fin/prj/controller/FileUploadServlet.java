@@ -26,11 +26,11 @@ public class FileUploadServlet extends HttpServlet
 
 
 		// 저장할 디렉토리 경로 설정
-		//String uploadDir = "C:\\git\\tendog\\FinalProject\\WebContent\\images\\"; // Adjust this path as needed
-		String uploadDir = System.getProperty("user.dir") + "\\WebContent\\images\\"; // Adjust this path as needed
+		String uploadDir = "C:\\git\\tendog\\FinalProject\\WebContent\\images\\"; // Adjust this path as needed
+		//String uploadDir = System.getProperty("user.dir") + "\\WebContent\\images\\"; // Adjust this path as needed
 		//					↓
 		// ServletContext를 통해 상대 경로로 저장할 디렉토리 경로 설정
-        //String uploadDir = getServletContext().getRealPath("/") + "images/";; // 상대 경로 설정
+        //String uploadDir = getServletContext().getRealPath("/images/"); // 상대 경로 설정
 		
 		// 디렉토리 생성 (존재하지 않는 경우)
 		File uploadDirectory = new File(uploadDir);

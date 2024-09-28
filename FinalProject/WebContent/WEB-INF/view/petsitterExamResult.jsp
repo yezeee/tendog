@@ -10,6 +10,7 @@ String cp = request.getContextPath();
 <meta charset="UTF-8">
 <title>petsitterExamResult.jsp</title>
 <link rel="stylesheet" type="text/css" href="<%=cp %>/css/final.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
 <script type="text/javascript">
 	var score = ${score};
 	

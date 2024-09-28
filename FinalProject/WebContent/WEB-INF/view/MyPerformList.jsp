@@ -31,12 +31,12 @@ String cp = request.getContextPath();
 		<br><br>
 		<div class="left" style="font-family: Pretendard; font-size: 14pt; width: 20%; text-align: right;">
 			<br><br> 
-			<a href="MyDogApplyList.jsp" style="font-weight: 500; line-height: 150%;">지원내역&nbsp;&nbsp;&nbsp;&nbsp;<br></a>
-			<a href="MyDogPetsittingList.jsp" style="font-weight: 800;">이용내역&nbsp;&nbsp;&nbsp;&nbsp;</a>
+			<a href="MyApplyList.jsp" style="font-weight: 500; line-height: 150%;">지원내역&nbsp;&nbsp;&nbsp;&nbsp;<br></a>
+			<a href="" style="font-weight: 800;">수행내역&nbsp;&nbsp;&nbsp;&nbsp;</a>
 		</div>
 		<div class="content" style="width: 60%; text-align: left; font-size: 18pt; font-weight: 600;">
 			<br><br>
-			&nbsp;&nbsp;&nbsp;&nbsp;수행내역
+			&nbsp;&nbsp;&nbsp;&nbsp;진행중
 			<hr style="border: 1px solid #F2F2F2;">
 			<table style="font-size: 12pt; width: 100%; text-align: center;">
 				<tr style="background-color: #F2F2F2; font-weight: 600;">
