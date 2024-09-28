@@ -35,7 +35,7 @@
 	</select>
 	
 	<insert id="performedPicInsert">
-		INSERT INTO PERFORMED_PIC VALUES('PP'||PERFORMED_PIC_SEQ.NEXTVAL, 'PERFORM6', #{pid}, SYSDATE, #{applytext})
+		INSERT INTO PERFORMED_PIC VALUES('PP'||PERFORMED_PIC_SEQ.NEXTVAL, #{performCd}, #{pid}, SYSDATE, #{applytext})
 	</insert>
 	
 	<select id="performedPicList" resultType="com.fin.prj.dto.PerformedPicDTO">

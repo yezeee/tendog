@@ -3,6 +3,9 @@
 <%
 request.setCharacterEncoding("UTF-8");
 String cp = request.getContextPath();
+
+// URL에 저장된 performCd 받아오기
+String performCd = request.getParameter("performCd");
 %>
 <!DOCTYPE html>
 <html>
@@ -51,9 +54,9 @@ $().ready(function() {
 	            success: function (response) {
 	                console.log('업로드된 파일 경로:', response);
 	                
-	
 	                // 파일 경로를 hidden input에 설정 (폼 제출 시 경로를 함께 전송하기 위함)
 	                $('#filePathInput').val(response);
+	  
 	            },
 	            error: function (xhr, status, error) {
 	                console.error('업로드 중 오류 발생:', error);
@@ -84,6 +87,8 @@ $().ready(function() {
 		<br><br>
 		</div>
 		<form action="performedpicinsert.action" id="petForm">
+		<!-- hidden 타입으로 performCd 같이 넘기기 -->
+		<input type="hidden" name="performCd" value="<%=performCd %>">
 		<div style="width: 90%; display: flex; justify-content: flex-start;">
 			<!-- <div style="width: 10%;"></div> -->
 			<c:forEach var="pic" items="${picList }" varStatus="status">

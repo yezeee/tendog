@@ -64,13 +64,9 @@ public class PerformController
 		
 		System.out.println(map);
 		
-		// PERFORM1로 PERFORMED_PIC에 저장합니다 나중에 dao.xml수정해야함
 		dao.performedPicInsert(map);
-		
-		
-		return "redirect:petsittingperformform.action?performCd=PERFORM6";
-	
-	
+			
+		return "redirect:petsittingperformform.action?performCd=" + map.get("performCd");		
 	}
 	
 }
