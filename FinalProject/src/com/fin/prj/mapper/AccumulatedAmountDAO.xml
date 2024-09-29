@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+ <!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fin.prj.dao.IAccumulatedAmountDAO">
+
+	<select id="accumulatedAmount" resultType="java.lang.Integer">
+		SELECT NVL(SUM(P.PERFORM_MONEY),0) AS MONTH_ACC_PAY
+		FROM S, PETSITTING_APPLY PA, PETSITTING_REQ PR, PERFORM P
+		WHERE S.S_CD = PA.S_CD AND PA.POST_CD = PR.POST_CD AND PA.SITTING_APPLY_CD = P.SITTING_APPLY_CD
+		AND PR.WORK_DATE <![CDATA[ < ]]> SYSDATE
+		AND TO_CHAR(PR.WORK_DATE, 'YYYY') = #{year}
+		AND TO_CHAR(PR.WORK_DATE, 'MM') = DECODE(LENGTH(#{month}), 1, TO_CHAR(TO_NUMBER(#{month}), 'FM00'), #{month})
+		AND S.S_CD=#{sCd}
+	</select>
+	
+	<select id="salaryList" resultType="com.fin.prj.dto.PerformDTO">
+		SELECT PR.WORK_DATE, P.PERFORM_MONEY
+		FROM S, PETSITTING_APPLY PA, PETSITTING_REQ PR, PERFORM P
+		WHERE S.S_CD = PA.S_CD AND PA.POST_CD = PR.POST_CD AND PA.SITTING_APPLY_CD = P.SITTING_APPLY_CD
+		AND PR.WORK_DATE <![CDATA[ < ]]> SYSDATE
+		AND TO_CHAR(PR.WORK_DATE, 'YYYY') = #{year}
+		AND TO_CHAR(PR.WORK_DATE, 'MM') = DECODE(LENGTH(#{month}), 1, TO_CHAR(TO_NUMBER(#{month}), 'FM00'), #{month})
+		AND S.S_CD=#{sCd}
+	</select>
+
+</mapper>

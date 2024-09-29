@@ -11,6 +11,17 @@ String cp = request.getContextPath();
 <meta charset="UTF-8">
 <title>PetsitterMain.jsp</title>
 <link rel="stylesheet" type="text/css" href="<%=cp%>/css/final.css">
+<script type="text/javascript">
+
+//팝업 윈도우즈
+function winOpen(sCd) 
+{
+     var theURL = "accumulatedamountpopup.action?sCd=" + sCd;
+     var flag = "left=10,top=10,width=700,height=1000,toolbar=no,menubar=no,status=no,scrollbars=no,resizable=no";
+     window.open(theURL, 'PopupWindow', flag);
+}
+
+</script>
 </head>
 <body>
 
@@ -118,16 +129,16 @@ String cp = request.getContextPath();
 						</div>
 						<div style="width: 60%; font-weight: 600; font-size: 14pt; text-align: left;">
 							<br>
-							정산관리<br><br>
+							정산내역<br><br>
 							이번달 정산금액&nbsp;&nbsp;&nbsp;
 							<span style="font-weight: 400;"><fmt:formatNumber value="${sInfo.month_acc_pay}" type="number" pattern="#,##0" />원</span>
 							<br><br>							
 						</div>
 						<div style="width: 5%;">
 						</div>
-						<div style="width: 25%; line-height: 150%; color: gray; text-align: right;">
+						<div style="width: 25%; line-height: 150%; text-align: right;">
 							<br>
-							▶ 정산내역 보기
+							<a href="javascript:winOpen('${sInfo.s_cd}')" style="color: gray;">▶ 정산내역 보기</a>
 						</div>
 					</div>
 					<hr style="border: 1px solid #F2F2F2;">

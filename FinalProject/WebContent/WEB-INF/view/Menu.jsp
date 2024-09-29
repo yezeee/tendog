@@ -20,7 +20,7 @@
 	- 로그아웃 처리 가능 컨트롤 구성.
  ----------------------------------------->
  
-<br><br><br>
+<br>
 <div class="header" style="display: flex; align-items: center; justify-content: space-between;">
 	
 	<div style="display: flex; align-items: center;">

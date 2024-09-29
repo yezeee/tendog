@@ -2,8 +2,18 @@ package com.fin.prj.dto;
 
 public class PerformDTO
 {
-	String perform_cd, sitting_apply_cd, selected_date;
+	String perform_cd, sitting_apply_cd, selected_date, work_date;
 	int perform_money;
+	
+	
+	public String getWork_date()
+	{
+		return work_date;
+	}
+	public void setWork_date(String work_date)
+	{
+		this.work_date = work_date;
+	}
 	public String getPerform_cd()
 	{
 		return perform_cd;
