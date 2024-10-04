@@ -8,6 +8,9 @@ import com.fin.prj.dto.PerformDTO;
 
 public interface IAccumulatedAmountDAO
 {
+	// 해당 펫시터의 가입연도 (SelectBox 범위 지정 시 활용)
+	public int createAccountYear(String sCd);
+	
 	// 누적금액
 	public int accumulatedAmount(@Param("sCd") String sCd, @Param("year") String year, @Param("month") String month);
 	

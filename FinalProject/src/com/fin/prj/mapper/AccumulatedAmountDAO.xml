@@ -4,6 +4,13 @@
  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.fin.prj.dao.IAccumulatedAmountDAO">
 
+	<select id="createAccountYear" resultType="java.lang.Integer">
+		SELECT TO_CHAR(M.MEM_REG_DATE, 'YYYY') AS MEM_REG_DATE
+		FROM MEM M, S_APPLY SA, RES R, S
+		WHERE M.MEM_cD = SA.MEM_CD AND SA.S_APPLY_CD = R.S_APPLY_CD
+		AND R.RES_CD = S.RES_CD AND S.S_CD = #{sCd}
+	</select>
+
 	<select id="accumulatedAmount" resultType="java.lang.Integer">
 		SELECT NVL(SUM(P.PERFORM_MONEY),0) AS MONTH_ACC_PAY
 		FROM S, PETSITTING_APPLY PA, PETSITTING_REQ PR, PERFORM P

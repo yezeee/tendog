@@ -5,6 +5,7 @@
 	request.setCharacterEncoding("UTF-8");
 	String cp = request.getContextPath();
 	
+	/*
 	// 자기 자신 페이지로부터 데이터 수신
 	String sYear = request.getParameter("year");
 	String sMonth = request.getParameter("month");
@@ -27,6 +28,16 @@
 		selectYear = Integer.parseInt(sYear);
 		selectMonth = Integer.parseInt(sMonth);
 	}
+	*/
+		
+	int regYear = (Integer)request.getAttribute("regYear");
+
+	int nowYear = Integer.parseInt((String)request.getAttribute("nowYear"));
+	int selectedYear = Integer.parseInt((String)request.getAttribute("selectedYear"));
+
+	//int nowMonth = Integer.parseInt((String)request.getAttribute("nowMonth"));
+	int selectedMonth = Integer.parseInt((String)request.getAttribute("selectedMonth"));
+	
 %>
 <!DOCTYPE html>
 <html>
@@ -37,10 +48,12 @@
 <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
 <script type="text/javascript">
 
+	/*
 	function formChange(obj)
 	{
 		obj.submit();
 	}
+	*/
 
 	$().ready(function()
 	{
@@ -64,31 +77,31 @@
 	<br><br>
 		<div>
 			<form method="get">
-				<select name="year" id="year" onchange="formChange(this.form)" style="border: none; font-size: 18pt;">
+				<select name="year" id="year" style="border: none; font-size: 18pt;">
 				<%
-				for (int i=-10; i<=10; i++)
+				for (int i=regYear; i<=nowYear; i++)
 				{
-					if ((selectYear+i) == selectYear)
+					if (i == selectedYear)
 					{
 				%>
-						<option value=<%=(selectYear+i) %> selected="selected"><%=(selectYear+i) %></option>
+						<option value=<%=i %> selected="selected"><%=i %></option>
 				<%
 					}
 					else
 					{
 				%>
-						<option value=<%=(selectYear+i) %>><%=(selectYear+i) %></option>
+						<option value=<%=i %>><%=i %></option>
 				<%
 					}
 				}
 				%>
 				</select>
 				년			
-				<select name="month" id="month" onchange="formChange(this.form)" style="border: none; font-size: 18pt;">
+				<select name="month" id="month" style="border: none; font-size: 18pt;">
 				<%
 				for (int i=1; i<=12; i++)
 				{
-					if (i == selectMonth)
+					if (i == selectedMonth)
 					{
 				%>
 						<option value=<%=i %> selected="selected"><%=i %></option>
