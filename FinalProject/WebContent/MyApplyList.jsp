@@ -24,7 +24,7 @@ String cp = request.getContextPath();
 		</div>
 		<div class="content" style="width: 60%; text-align: left; font-size: 18pt; font-weight: 600;">
 			<br><br>
-			&nbsp;&nbsp;&nbsp;&nbsp;지원중
+			&nbsp;&nbsp;&nbsp;&nbsp;지원중 n건
 			<div style="float: right;">
 				<select>
 					<option>정렬</option>
@@ -62,7 +62,7 @@ String cp = request.getContextPath();
 				</tr>
 			</table>
 			<br><br>
-			&nbsp;&nbsp;&nbsp;&nbsp;매칭완료
+			&nbsp;&nbsp;&nbsp;&nbsp;매칭완료 n건
 			<div style="float: right;">
 				<select>
 					<option>정렬</option>

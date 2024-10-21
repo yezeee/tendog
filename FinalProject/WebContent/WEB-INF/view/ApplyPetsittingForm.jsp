@@ -339,7 +339,7 @@ String cp = request.getContextPath();
                   </select>
                   <br><br><br>
                   <span style="font-weight: 600; font-size: 14pt;">맡길 장소&nbsp;</span>
-                  <div id="selectedRegion" style="display: inline-block;">${memInfo.class3 }</div>
+                  <div id="selectedRegion" style="display: inline-block;">${memInfo.class1 } ${memInfo.class2 } ${memInfo.class3 }</div>
                   <br><br>
                   <input id="zonecode" name="zonecode" type="text" readonly="readonly" value="${memInfo.zonecode }" style="width: 70px;">
                   <button type="button" onclick="searchAddr()">검색</button><br>

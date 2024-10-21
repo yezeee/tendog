@@ -24,9 +24,6 @@ String cp = request.getContextPath();
 		</div>
 		<div class="content" style="width: 60%; text-align: center; font-size: 12pt; font-weight: 400;">
 			<br><br><br>
-			<span style="font-family: 'Cafe24Ssurround'; font-size: 20pt;">최근 5일간 보리의 활동량이 다소 줄었어요.</span>
-			<br><br><span style="font-size: 12pt; color: gray;">▶ 통계 보기</span>
-			<hr style="border: 2px solid #F2F2F2;">
 			<div style="display: flex; justify-content: space-between;">
 				<div style="width: 20%; text-align: right;">
 					<br>
@@ -61,7 +58,7 @@ String cp = request.getContextPath();
 					힐스
 					<br><br>
 					<span style="font-weight: 700;">영양제</span><br>
-					OOO
+					닥터바이
 					<br>			
 				
 				</div>
@@ -76,10 +73,8 @@ String cp = request.getContextPath();
 					<br>
 					<span style="font-weight: 600;">그룹원</span><br><br>
 					<!-- <span style="font-size: 16pt;">4<span style="font-size: 10pt;">명</span></span><br> -->
-					<img src="images/user.png" style="width: 8%; vertical-align: middle; margin-right: 5px;"> OOO<br>
-					<img src="images/user.png" style="width: 8%; vertical-align: middle; margin-right: 5px;"> OOO<br>
-					<img src="images/user.png" style="width: 8%; vertical-align: middle; margin-right: 5px;"> OOO<br>
-					<img src="images/user.png" style="width: 8%; vertical-align: middle; margin-right: 5px;"> OOO<br><br>
+					<img src="images/user.png" style="width: 8%; vertical-align: middle; margin-right: 5px;"> 김예지<br>
+					<img src="images/user.png" style="width: 8%; vertical-align: middle; margin-right: 5px;"> 김지현<br><br>
 					<span style="color: gray; font-size: 12pt;">▶ 그룹원 관리</span>
 				</div>
 				<hr style="border: 1px solid #F2F2F2;">
@@ -163,7 +158,7 @@ String cp = request.getContextPath();
 					<span style="color: gray; font-size: 12pt;">▶ 펫시팅내역 관리</span>
 				</div>
 				<hr style="border: 1px solid #F2F2F2;">
-				<div style="width: 70%; display: flex; justify-content: space-between; align-items: center; text-align: left;">
+				<div style="width: 70%; display: flex; justify-content: flex-start; align-items: center; text-align: left;">
 					<div style="width: 10%;">
 
 						<span style="font-weight: 600; font-size: 14pt; text-align: left;">사진첩</span>
@@ -173,17 +168,15 @@ String cp = request.getContextPath();
 						<img src="images/dailyDog.jpg" style="width: 90%; border: 3px solid #BBBBBB; border-radius: 5px;">
 					</div>
 					<div style="width: 25%;">
-						<img src="images/dailyDog.jpg" style="width: 90%; border: 3px solid #BBBBBB; border-radius: 5px;">
+						<img src="images/happyDog.jpg" style="width: 90%; border: 3px solid #BBBBBB; border-radius: 5px;">
 					</div>
 					<div style="width: 25%;">
-						<img src="images/dailyDog.jpg" style="width: 90%; border: 3px solid #BBBBBB; border-radius: 5px;">
 					</div>
 					<div style="width: 15%; text-align: right;">
 						<span style="color: gray; font-size: 12pt;">▶ 더보기</span>
 					</div>
 				</div>
 			</div>
-			<hr style="border: 2px solid #F2F2F2;">
 			<br><br>
 		</div>
 		<div style="width: 20%;"></div>

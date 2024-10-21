@@ -591,14 +591,14 @@ option {
 
 
 	<c:import url="Menu.jsp"></c:import>
-	<div class="main" style="background-color: #EBF7FF;">
+	<div class="main" style="background-color: #F2F2F2;">
 		<br> <br>
 		<div class="left" style="font-family: Pretendard; font-size: 14pt; width: 20%; float: left; text-align: right;">
 			<br> <br> <br> <span style="font-weight: 800; line-height: 150%;">반려견 등록&nbsp;&nbsp;&nbsp;&nbsp;<br>
 			</span> <a href="dogmanagement.action" style="font-weight: 500;">반려견 관리&nbsp;&nbsp;&nbsp;&nbsp;</a>
 		</div>
 		<div style="width: 60%; margin: 0 auto;">
-			<div style="background-color: #A3DBFF; color: white; display: flex; justify-content: space-between; align-items: center;">
+			<div style="background-color: #BBBBBB; color: white; display: flex; justify-content: space-between; align-items: center;">
 				<div style="width: 20%; text-align: right;">
 					<br> <span style="font-size: 20pt; font-weight: 600;">&nbsp;반려견 등록하기</span> <br> <br>
 				</div>
@@ -615,7 +615,7 @@ option {
 					<div style="width: 40%; text-align: center;">
 						<br> <br> <br> &nbsp;&nbsp;&nbsp;&nbsp;
 						<div style="width: 150px; height =150px; padding-left: 150px">
-							<img style="border: solid white 1px; width: 100%; height: 100%; object-fit: cover; border-radius: 50%" id="dogImage" src="images/dog.png" alt="Dog Photo">
+							<img style="border: solid white 1px; width: 100%; height: 100%; object-fit: cover; border-radius: 50%" id="dogImage" src="images/tendogIMG_B.png" alt="Dog Photo">
 						</div>
 						<br>
 						<!-- 파일 업로드 폼과 버튼 -->

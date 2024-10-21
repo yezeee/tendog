@@ -111,16 +111,21 @@ function winOpen(sCd)
 						</div>
 						<div style="width: 60%; font-weight: 600; font-size: 14pt; text-align: left;">
 							<br>
+							수행내역<br><br>
+							최근 수행&nbsp;&nbsp;&nbsp;<span style="font-weight: 400;">일자</span>
+							<%-- 
 							지원내역<br><br>
 							지원 중&nbsp;&nbsp;&nbsp;<span style="font-weight: 400;">${sInfo.apply_count }건</span><br>
-							매칭 완료&nbsp;&nbsp;&nbsp;<span style="font-weight: 400;">${sInfo.matching_count }건</span>
+							매칭 완료&nbsp;&nbsp;&nbsp;<span style="font-weight: 400;">${sInfo.matching_count }건</span> 
+							--%>
 							<br><br>							
 						</div>
 						<div style="width: 5%;">
 						</div>
 						<div style="width: 25%; line-height: 150%; color: gray; text-align: right;">
 							<br>
-							<a href="myperformlist.action" style="color: gray;">▶ 지원내역 보기</a>
+							<!-- <a href="myperformlist.action" style="color: gray;">▶ 지원내역 보기</a> -->
+							<a href="myperformlist.action" style="color: gray;">▶ 수행내역 보기</a>
 						</div>
 					</div>
 					<hr style="border: 1px solid #F2F2F2;">

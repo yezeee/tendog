@@ -124,14 +124,14 @@ select {
 </head>
 <body>
 	<c:import url="Menu.jsp"></c:import>
-	<div class="main" style="background-color: #EBF7FF;">
+	<div class="main" style="background-color: #F2F2F2;">
 		<br> <br>
 		<div class="left" style="font-family: Pretendard; font-size: 14pt; width: 20%; float: left; text-align: right;">
 			<br> <br> <br> <span style="font-weight: 800; line-height: 150%;">반려견 등록&nbsp;&nbsp;&nbsp;&nbsp;<br>
 			</span> <a href="dogmanagement.action" style="font-weight: 500;">반려견 관리&nbsp;&nbsp;&nbsp;&nbsp;</a>
 		</div>
 		<div style="width: 60%; margin: 0 auto;">
-			<div style="background-color: #A3DBFF; color: white; display: flex; justify-content: space-between; align-items: center;">
+			<div style="background-color: #BBBBBB; color: white; display: flex; justify-content: space-between; align-items: center;">
 				<div style="width: 20%; text-align: right;">
 					<br> <span style="font-size: 20pt; font-weight: 600;">&nbsp;반려견 코드 입력</span> <br> <br>
 				</div>
@@ -143,11 +143,8 @@ select {
 		
 			<form action="dogcodeinsert.action" id="dogForm">
 				<div class="photo-container" style="background-color: white; text-align: left; display: flex; justify-content: space-between;">
-					<div style="width: 40%; text-align: center;">
-						<br /><br />  <img style="height:150px; width: 150px;" id="dogImage" src="images/dog.png" alt="Dog Photo"> <br> 
-						
-					</div>
-					<div style="font-family: Pretendard; font-weight: 600; font-size: 14pt; width: 60%;">
+					
+					<div style="font-family: Pretendard; font-weight: 600; font-size: 14pt; width: 60%; margin: 0 auto;">
 						<br>
 
 						<div class=form-group>
@@ -177,7 +174,7 @@ select {
 	</div>
 
 
-	<div class="footer" style="background-color: white;">
+	<div class="footer" style="background-color: #BBBBBB;">
 		<br> <br> <br> <br> <br> <br>
 	</div>
 

@@ -25,7 +25,7 @@
 	
 	<div style="display: flex; align-items: center;">
 		&nbsp;&nbsp;&nbsp;&nbsp; 
-		<img src="images/logo.png" style="width: 150px; vertical-align: middle;">
+		<img src="images/tendogIMG_B.png" style="width: 80px; vertical-align: middle;">
 	</div>
 	
 	<div id="tab" style="display: flex; align-items: center;">
@@ -37,10 +37,13 @@
 	
 		<c:choose>
 		<c:when test="${memCd!=null }">
-		<div style="display: flex; align-items: center;">
+		<div style="display: flex; align-items: center; font-family: Pretendard; color: gray;">
+			<!-- 
 			<img src="images/bell.png" style="width: 25px; margin-left: 10px;">
 			<img src="images/gear.png" style="width: 25px; margin-left: 10px;">
-			<a href="mypage.action"><img src="images/user.png" style="width: 30px; margin-left: 10px;"></a>
+			<a href="mypage.action"><img src="images/user.png" style="width: 30px; margin-left: 10px;"></a> 
+			-->
+			<a href="logout.action">로그아웃</a>
 			&nbsp;&nbsp;&nbsp;&nbsp;
 		</div>
 		</c:when>

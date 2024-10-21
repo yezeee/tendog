@@ -127,7 +127,7 @@ $().ready(function() {
 				<div style="width: 30%; display: flex; justify-content: center; flex-direction: column; align-items: center; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); margin-top: 25px; margin-bottom: 25px; margin-right: 25px; text-align: center;">
 					<div style="width: 75%; border: 2px solid #F2F2F2; margin-top: 25px; margin-bottom: 25px; overflow: hidden;">
 						<br><br>
-							<img style="border: solid white 1px; width: 50%; height: 50%; object-fit: cover;" id="dogImage" src="images/시바.jpg" alt="Dog Photo">				
+							<img style="border: solid white 1px; width: 50%; height: 50%; object-fit: cover;" id="dogImage" src="images/tendogIMG_B.png" alt="Dog Photo">				
 							<!-- 파일 업로드 폼과 버튼 -->
 	
 							<!-- 숨겨진 파일 입력 -->
@@ -161,7 +161,7 @@ $().ready(function() {
 			<div style="width: 30%; display: flex; justify-content: center; flex-direction: column; align-items: center; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); margin-top: 25px; margin-bottom: 25px; margin-right: 25px; text-align: center;">
 				<div style="width: 75%; border: 2px solid #F2F2F2; margin-top: 25px; margin-bottom: 25px; overflow: hidden;">
 					<br><br>
-						<img style="border: solid white 1px; width: 60%; height: 60%; object-fit: cover;" id="dogImage" src="images/시바.jpg" alt="Dog Photo">				
+						<img style="border: solid white 1px; width: 60%; height: 60%; object-fit: cover;" id="dogImage" src="images/tendogIMG_B.png" alt="Dog Photo">				
 						<!-- 파일 업로드 폼과 버튼 -->
 
 						<!-- 숨겨진 파일 입력 -->

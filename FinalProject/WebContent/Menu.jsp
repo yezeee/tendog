@@ -20,19 +20,21 @@
 	- 로그아웃 처리 가능 컨트롤 구성.
  ----------------------------------------->
  
-<br><br><br>
+<!-- <div style="background-color: #B27500;"> -->
+<br>
 <div class="header" style="display: flex; align-items: center; justify-content: space-between;">
 	
 	<div style="display: flex; align-items: center;">
 		&nbsp;&nbsp;&nbsp;&nbsp; 
-		<img src="images/logo.png" style="width: 150px; vertical-align: middle;">
+		<!-- <img src="images/logo.png" style="width: 150px; vertical-align: middle;"> -->
+		<img src="images/tendogLogo_IMG.png" style="width: 80px; vertical-align: middle;">
 	</div>
 	
 	<div id="tab" style="display: flex; align-items: center;">
-	    <a>홈</a>
-	    <a>펫시팅</a>
-	    <a>커뮤니티</a>
-	    <a href="MyPagePetPartners.jsp">마이페이지</a>
+	    <a style="color: #B27500;">홈</a>
+	    <a style="color: #B27500;">펫시팅</a>
+	    <a style="color: #B27500;">커뮤니티</a>
+	    <a href="MyPagePetPartners.jsp" style="color: #B27500;">마이페이지</a>
 	</div>
 	
 	<div style="display: flex; align-items: center;">
@@ -43,7 +45,7 @@
 	</div>
 </div>
 <br>
-
+<!-- </div> -->
 
 </body>
 </html>

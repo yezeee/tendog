@@ -73,7 +73,7 @@ function winOpen(element)
 				<c:forEach var="dog" items="${dogList }">
 					<br>
 					<img src="images/dog.png" style="width: 100px;"><br>
-					<span style="font-weight: 600; font-size: 14pt;">${dog.dog_name }<br><span style="font-size: 11pt; font-weight: 400;">${dog.breed }, ${dog.age + 1 }세</span></span><br>
+					<span style="font-weight: 600; font-size: 14pt;">${dog.dog_name }<br><span style="font-size: 11pt; font-weight: 400;">${dog.breed }, ${dog.age }세</span></span><br>
 					<a style="font-size: 10pt; font-weight: 600; color: gray;">정보 보기</a>
 					<br><br>
 					<hr style="border: 1px solid white; width: 50%;">

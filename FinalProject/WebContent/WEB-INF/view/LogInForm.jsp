@@ -50,7 +50,8 @@ String cp = request.getContextPath();
 		<div style="background-color: white; width: 20%; margin: 0 auto; text-align: center; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); margin-top: 100px; margin-bottom: 120px;">
 			<br><br>
 			<div>
-			<img src="images/logoVertical.png" style="width: 20%; vertical-align: middle;"><br>
+			<!-- <img src="images/logoVertical.png" style="width: 20%; vertical-align: middle;"><br> -->
+			<img src="images/tendogV_B.png" style="width: 30%; vertical-align: middle;"><br>
 			</div>
 			<br><br>
 			<div style="display: flex; justify-content: space-between;">
